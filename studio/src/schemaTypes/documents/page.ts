@@ -41,6 +41,45 @@ export const page = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'title',
+      title: 'Page Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'heroImage',
+      title: 'Hero Image',
+      type: 'image',
+      options: { hotspot: true },
+    }),
+    defineField({
+      name: 'heroText',
+      title: 'Hero Text',
+      type: 'string',
+    }),
+    defineField({
+      name: 'services',
+      title: 'Services',
+      type: 'array',
+      of: [{type: 'service'}],
+    }),
+    defineField({
+      name: 'carouselImages',
+      title: 'Carousel Images',
+      type: 'array',
+      of: [{ type: 'image' }],
+    }),
+    defineField({
+      name: 'testimonials',
+      title: 'Testimonials',
+      type: 'array',
+      of: [{type: 'testimonial'}],
+    }),
+    defineField({
+      name: 'contactInfo',
+      title: 'Contact Info',
+      type: 'contactInfo',
+    }),
+    defineField({
       name: 'pageBuilder',
       title: 'Page builder',
       type: 'array',
